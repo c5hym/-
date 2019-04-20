@@ -18,7 +18,7 @@
 
 
 body {
-  font-family: "游明朝体", "Yu Mincho", YuMincho, "ヒラギノ明朝 Pro", "Hiragino Mincho Pro", "MS P明朝", "MS PMincho", serif;
+  font-family: ten-mincho,  "游明朝体", "Yu Mincho", YuMincho, "ヒラギノ明朝 Pro", "Hiragino Mincho Pro", "MS P明朝", "MS PMincho", serif;
 
   overflow-x: hidden;
 }
@@ -157,6 +157,8 @@ body {
     font-size: 2.0rem;
     letter-spacing: 0.40rem;
     writing-mode: vertical-rl;
+    -webkit-writing-mode: vertical-rl;
+    -ms-writing-mode: vertical-rl;
   }
 
   .sp-header__catch::before {
@@ -258,7 +260,7 @@ body {
 .header__reserve .reserve__form input,
 .header__reserve .reserve__form select,
 .header__reserve .reserve__form button {
-   font-family: "游明朝体", "Yu Mincho", YuMincho, "ヒラギノ明朝 Pro", "Hiragino Mincho Pro", "MS P明朝", "MS PMincho", serif;
+   font-family: ten-mincho, "游明朝体", "Yu Mincho", YuMincho, "ヒラギノ明朝 Pro", "Hiragino Mincho Pro", "MS P明朝", "MS PMincho", serif;
    font-size: 1.2rem;
    letter-spacing: 0.12rem;
 }
@@ -451,7 +453,8 @@ body {
   width: 60px;
   height: 60px;
 
-  background: url('../images/logo_black.png') center center no-repeat / contain;
+  background: url('../images/logo_black.png') center center / contain;
+  background-repeat: no-repeat;
 }
 
 .header__gNav .gNav__link {
@@ -504,26 +507,18 @@ body {
 @media screen and (max-width:543px) {
 
   .header-inner {
-    width: 100%;
+  }
+
+  .header__gNav-toggle {
+    width: 50vw;
+    height: 100vh; /* 56px = stickyの高さ */
 
     position: fixed;
     top: 56px;
     left: 0;
-    z-index: 5;
-  }
-
-  .header__gNav {
-    width: 50vw;
-    height: calc(100vh - 56px);　/* 56px = stickyの高さ */
-
-    position: fixed;
-    top: 0;
-    left: 0;
     z-index: 10;
 
     transform: translateX(-101%);
-
-    margin: 0; /* ? */
 
     background: rgba(0,0,0,0.8);
 
@@ -555,7 +550,8 @@ body {
     width: 60px;
     height: 60px;
 
-    background: url('../images/logo_black.png') center center no-repeat / contain;
+    background: url('../images/logo_black.png') center center / contain;
+    background-repeat: no-repeat;
   }
 
   .header__gNav .gNav__link {
@@ -595,9 +591,9 @@ body {
 
   .header__gNav-toggle-btn {
     display: block;
-    position: absolute;
+    position: fixed;
     left: 15px;
-    top: 15px;
+    top: 71px;
     width: 42px;
     height: 42px;
     cursor: pointer;
@@ -728,25 +724,32 @@ body {
   bottom: -70px;
   right: 0px;
 
-  background: url('../images/mainvisual_deco.png') center center no-repeat / contain;
+  background: url('../images/mainvisual_deco.png') center center / contain;
+  background-repeat: no-repeat;
 }
 
-.header__catch {
+.header__catch-outer {
   height: 100%;
-
-  padding: 0 15px;
-  margin-left: -5px;
 
   position: absolute;
   top: 0;
   left: 50%;
-  transform: translateX(-100%); /* 特殊 */
+  transform: translateX(-50%);
+}
+
+.header__catch {
+  display: block;
+  height: 100%;
+
+  padding: 0 15px;
 
   color: rgba(255, 255, 255, 0.9);
   font-size: 2.0rem;
   letter-spacing: 0.50rem;
   text-align: center;
   writing-mode: vertical-rl;
+  -webkit-writing-mode: vertical-rl;
+  -ms-writing-mode: vertical-rl;
 
   background-color: rgba(0, 0, 0, 0.5);
 }
@@ -784,10 +787,6 @@ body {
   box-shadow:-1px 1px 23px -15px Black inset;
 }
 
-.main__about-inner {
-  writing-mode: vertical-rl;
-}
-
 .main__about .about__title {
   margin-left: 50px;
 
@@ -806,9 +805,27 @@ body {
 }
 
 
+@media screen and (min-width:767px) {
+  .main__about-inner1 {
+    position: relative;
+
+    text-align: center;
+  }
+
+  .main__about-inner2 {
+    display: inline-block;
+
+    text-align: left;
+    writing-mode: tb-rl;
+    -webkit-writing-mode: vertical-rl;
+    -ms-writing-mode: vertical-rl;
+  }
+}
+
+
 @media screen and (max-width:766px) {
 
-  .main__about-inner {
+  .main__about-inner2 {
     writing-mode: horizontal-tb;
     text-align: center;
   }
@@ -881,7 +898,8 @@ body {
   margin: 0 auto;
   margin-bottom: 50px;
 
-  background: url('../images/produce_title.png') center center no-repeat / contain
+  background: url('../images/produce_title.png') center center / contain;
+  background-repeat: no-repeat;
 }
 
 .main__produce .produce__item:nth-child(2) {
@@ -901,15 +919,18 @@ body {
 }
 
 .main__produce .produce__item:nth-child(1) .produce__item-inner {
-  background: url('../images/produce_img01.jpg') center center no-repeat / cover;
+  background: url('../images/produce_img01.jpg') center center  / cover;
+  background-repeat: no-repeat;
 }
 
 .main__produce .produce__item:nth-child(2) .produce__item-inner {
-  background: url('../images/produce_img02.jpg') center center no-repeat / cover;
+  background: url('../images/produce_img02.jpg') center center / cover;
+  background-repeat: no-repeat;
 }
 
 .main__produce .produce__item:nth-child(3) .produce__item-inner {
-  background: url('../images/produce_img03.jpg') center center no-repeat / cover;
+  background: url('../images/produce_img03.jpg') center center / cover;
+  background-repeat: no-repeat;
 }
 
 .main__produce .produce__item-inner-inner {
@@ -937,7 +958,6 @@ body {
   margin-right: 50px;
 
   font-size: 3.0rem;
-  font-weight: bold;
   letter-spacing: 0.30rem;
 }
 
@@ -1027,7 +1047,6 @@ body {
 
 .main__plan .plan__title {
   font-size: 3.0rem;
-  font-weight: bold;
   letter-spacing: 0.30rem;
   text-align: center;
 }
@@ -1082,19 +1101,23 @@ body {
 }
 
 .main__plan .plan__item:nth-child(1) .item__image {
-  background: url("../images/plan_item_img01.jpg") center center no-repeat / cover;
+  background: url("../images/plan_item_img01.jpg") center center / cover;
+  background-repeat: no-repeat;
 }
 
 .main__plan .plan__item:nth-child(2) .item__image {
-  background: url("../images/plan_item_img02.jpg") center center no-repeat / cover;
+  background: url("../images/plan_item_img02.jpg") center center / cover;
+  background-repeat: no-repeat;
 }
 
 .main__plan .plan__item:nth-child(3) .item__image {
-  background: url("../images/plan_item_img03.jpg") center center no-repeat / cover;
+  background: url("../images/plan_item_img03.jpg") center center / cover;
+  background-repeat: no-repeat;
 }
 
 .main__plan .plan__item:nth-child(4) .item__image {
-  background: url("../images/plan_item_img04.jpg") center center no-repeat / cover;
+  background: url("../images/plan_item_img04.jpg") center center / cover;
+  background-repeat: no-repeat;
 }
 
 .main__plan .plan__item .item__content {
@@ -1154,7 +1177,8 @@ body {
 }
 
 .main__plan .plan__item:nth-child(4) .item__type .type__image {
-  background: url('../images/plan_mari04.png') center center no-repeat / contain;
+  background: url('../images/plan_mari04.png') center center / contain;
+  background-repeat: no-repeat;
 }
 
 .main__plan .plan__item .item__type .type__text {
@@ -1164,7 +1188,6 @@ body {
 
   font-size: 2.5rem;
   letter-spacing: 0.25rem;
-  font-weight: bold;
   writing-mode: vertical-rl;
 }
 
@@ -1172,7 +1195,6 @@ body {
   margin-bottom: 25px;
 
   font-size: 1.4rem;
-  font-weight: bold;
   letter-spacing: 0.28rem;
   line-height: 2.0rem;
   text-align: left; /* text-align:centerの継承を戻す　*/
@@ -1304,7 +1326,8 @@ body {
   padding: 25px 0;
   margin-bottom: 30px;
 
-  background: url('../images/news_title_back_horizontal.jpg') center center no-repeat / cover;
+  background: url('../images/news_title_back_horizontal.jpg') center center / cover;
+  background-repeat: no-repeat;
   box-shadow:0px 0px 30px 0px White;
 
 }
@@ -1314,12 +1337,12 @@ body {
   height: 100%; /* text-align:center のため */
 
   font-size: 2.5rem;
-  font-weight: bold;
   letter-spacing: 0.25rem;
   text-align: center;
   writing-mode: horizontal-tb;
 
-  background: url('../images/news_title_deco_horizontal.png') center center no-repeat / 80% auto;
+  background: url('../images/news_title_deco_horizontal.png') center center / 80% auto;
+  background-repeat: no-repeat;
 }
 
 .main__news .news__list {
@@ -1390,7 +1413,6 @@ body {
   margin-top: 15px;
 
   font-size: 1.4rem;
-  font-weight: bold;
   letter-spacing: 0.14rem;
   line-height: 2.0rem;
 }
@@ -1465,7 +1487,8 @@ body {
 
     margin-bottom: 0;
 
-    background: url('../images/news_title_back.jpg') center center no-repeat / cover;
+    background: url('../images/news_title_back.jpg') center center / cover;
+    background-repeat: no-repeat;
   }
 
   .main__news .news__title {
@@ -1478,8 +1501,11 @@ body {
     transform: translate(-50%, -50%);
 
     writing-mode: vertical-rl;
+    -webkit-writing-mode: vertical-rl;
+    -ms-writing-mode: vertical-rl;
 
-    background: url('../images/news_title_deco.png') center center no-repeat / auto 80%;
+    background: url('../images/news_title_deco.png') center center / auto 80%;
+    background-repeat: no-repeat;
   }
 
 }
@@ -1591,6 +1617,8 @@ body {
   font-size: 1.4rem;
   letter-spacing: 0.14rem;
   writing-mode: vertical-rl;
+  -webkit-writing-mode: vertical-rl;
+  -ms-writing-mode: vertical-rl;
 
   transition: 0.3s;
 }

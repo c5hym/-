@@ -11,6 +11,16 @@
     <link rel="stylesheet" href="css/swiper.min.css">
     <!-- other -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <script>
+      (function(d) {
+        var config = {
+          kitId: 'fkb1abv',
+          scriptTimeout: 3000,
+          async: true
+        },
+        h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+      })(document);
+    </script>
     <!-- js script -->
     <script
   src="https://code.jquery.com/jquery-3.3.1.js"
@@ -27,9 +37,9 @@
     <div class="sp-mainvisual" style="display: none;">
       <div class="sp-mainvisual__image-wrapper"></div>
       <div class="sp-mainvisual__image-box">
-          <div class="sp-mainvisual__image" style="background: url('images/mainvisual_img01.jpg') center center no-repeat / cover"></div>
-          <div class="sp-mainvisual__image" style="background: url('images/mainvisual_img02.jpg') center center no-repeat / cover"></div>
-          <div class="sp-mainvisual__image" style="background: url('images/mainvisual_img03.jpg') center center no-repeat / cover"></div>
+          <div class="sp-mainvisual__image" style="background: url('images/mainvisual_img01.jpg') center center / cover; background-repeat: no-repeat;"></div>
+          <div class="sp-mainvisual__image" style="background: url('images/mainvisual_img02.jpg') center center / cover; background-repeat: no-repeat;"></div>
+          <div class="sp-mainvisual__image" style="background: url('images/mainvisual_img03.jpg') center center / cover; background-repeat: no-repeat;"></div>
       </div>
     </div>
     <header class="header wow fadeIn" data-wow-duration="5s">
@@ -75,7 +85,7 @@
                   <a href="#" class="tNav__link">アクセス</a>
                 </li>
                 <li class="tNav__item">
-                  <a href="#" class="tNav__link">F&Q</a>
+                  <a href="#" class="tNav__link">F&amp;Q</a>
                 </li>
               </ul>
             </nav>
@@ -84,7 +94,7 @@
       </div>
       <div class="header-inner">
         <div class="header__gNav-toggle-btn"><span></span><span></span><span></span></div>
-        <nav class="header__gNav header__gNav-toggle content">
+        <nav class="header__gNav header__gNav-toggle">
           <ul class="gNav__list">
             <li class="gNav__item">
               <a href="#" class="gNav__link">宿泊プラン</a>
@@ -111,12 +121,14 @@
         </nav>
         <div class="header__mainvisual">
           <div class="mainvisual__image-box">
-            <div class="mainvisual__image" style="background: url('images/mainvisual_img02.jpg') center center no-repeat / cover"></div>
-            <div class="mainvisual__image" style="background: url('images/mainvisual_img01.jpg') center center no-repeat / cover"></div>
-            <div class="mainvisual__image" style="background: url('images/mainvisual_img03.jpg') center center no-repeat / cover"></div>
+            <div class="mainvisual__image" style="background: url('images/mainvisual_img02.jpg') center center / cover; background-repeat: no-repeat;"></div>
+            <div class="mainvisual__image" style="background: url('images/mainvisual_img01.jpg') center center / cover; background-repeat: no-repeat;"></div>
+            <div class="mainvisual__image" style="background: url('images/mainvisual_img03.jpg') center center / cover; background-repeat: no-repeat;"></div>
           </div>
           <div class="mainvisual__deco"></div>
-          <div class="header__catch">旅の疲れを癒しましょう</div>
+          <div class="header__catch-outer">
+            <div class="header__catch">旅の疲れを癒しましょう</div>
+          </div>
         </div>
         <div class="mainvisual__deco"></div>
       </div>
@@ -124,36 +136,38 @@
     </header>
     <main class="main">
       <section class="main__about">
-        <div class="main__about-inner content">
-          <h2 class="about__title wow fadeIn" data-wow-duration="2s">癒し</h2>
-          <div class="about__text">
-            <p>
-              <span class="wow fadeIn" data-wow-duration="2s" data-wow-delay=".1s">私は前毫も同じ話学というのの時が見ますな。</span><br>
-              <span class="wow fadeIn" data-wow-duration="2s" data-wow-delay=".2s">近頃たくさんが沙汰屋は、</span><br>
-              <span class="wow fadeIn" data-wow-duration="2s" data-wow-delay=".3s">今にその答弁ないですまでのありて行くなからは一言しないないて、</span><br>
-              <span class="wow fadeIn" data-wow-duration="2s" data-wow-delay=".4s">だんだんには握っましたでざわざ、</span><br>
-              <span class="wow fadeIn" data-wow-duration="2s" data-wow-delay=".5s">使用をしですという皆附随ないないんないば。</span>
-            </p>
-            <p>
-              <span class="wow fadeIn" data-wow-duration="2s" data-wow-delay=".7s">この元来もあなたか国家哲学にやつして、</span><br>
-              <span class="wow fadeIn" data-wow-duration="2s" data-wow-delay=".8s">大森さんのものへ心の私に常にご妨害と使うがそのお払底で防ぐでしなけれて、</span><br>
-              <span class="wow fadeIn" data-wow-duration="2s" data-wow-delay=".9s">けっしてようやくお出かけが行っませてかねるませので供するませです。</span><br>
-            </p>
-            <p>
-              <span class="wow fadeIn" data-wow-duration="2s" data-wow-delay="1.1s">あい方に考えようにかけるまで立てるましたば、</span><br>
-              <span class="wow fadeIn" data-wow-duration="2s" data-wow-delay="1.2s">たとえばたよりはないのに述べるて、</span><br>
-              <span class="wow fadeIn" data-wow-duration="2s" data-wow-delay="1.3s">そこに時代をあり得が何度に十時間は一杯はほぼなっば得るまでるものです。</span><br>
-              <span class="wow fadeIn" data-wow-duration="2s" data-wow-delay="1.4s">当時ないましか聴い書物があるて。</span><br>
-            </p>
-            <p>
-              <span class="wow fadeIn" data-wow-duration="2s" data-wow-delay="1.6s">その半途は結構広い真面目ないと飛びです事ないはおらましだ、</span><br>
-              <span class="wow fadeIn" data-wow-duration="2s" data-wow-delay="1.7s">低い社会のうちとあるでこの世なためとあっていなものませです。</span>
-            </p>
-            <p>
-              <span class="wow fadeIn" data-wow-duration="2s" data-wow-delay="1.9s">それで私は馬鹿ですのでなっですんですはよかった、</span><br>
-              <span class="wow fadeIn" data-wow-duration="2s" data-wow-delay="2s">新たですて進んですつもりんと困ると、</span><br>
-              <span class="wow fadeIn" data-wow-duration="2s" data-wow-delay="2.1s">そこの人の血をその本位に尊敬達していだで。</span>
-            </p>
+        <div class="main__about-inner1 content">
+          <div class="main__about-inner2">
+            <h2 class="about__title wow fadeIn" data-wow-duration="2s">癒し</h2>
+            <div class="about__text">
+              <p>
+                <span class="wow fadeIn" data-wow-duration="2s" data-wow-delay=".1s">私は前毫も同じ話学というのの時が見ますな。</span><br>
+                <span class="wow fadeIn" data-wow-duration="2s" data-wow-delay=".2s">近頃たくさんが沙汰屋は、</span><br>
+                <span class="wow fadeIn" data-wow-duration="2s" data-wow-delay=".3s">今にその答弁ないですまでのありて行くなからは一言しないないて、</span><br>
+                <span class="wow fadeIn" data-wow-duration="2s" data-wow-delay=".4s">だんだんには握っましたでざわざ、</span><br>
+                <span class="wow fadeIn" data-wow-duration="2s" data-wow-delay=".5s">使用をしですという皆附随ないないんないば。</span>
+              </p>
+              <p>
+                <span class="wow fadeIn" data-wow-duration="2s" data-wow-delay=".7s">この元来もあなたか国家哲学にやつして、</span><br>
+                <span class="wow fadeIn" data-wow-duration="2s" data-wow-delay=".8s">大森さんのものへ心の私に常にご妨害と使うがそのお払底で防ぐでしなけれて、</span><br>
+                <span class="wow fadeIn" data-wow-duration="2s" data-wow-delay=".9s">けっしてようやくお出かけが行っませてかねるませので供するませです。</span><br>
+              </p>
+              <p>
+                <span class="wow fadeIn" data-wow-duration="2s" data-wow-delay="1.1s">あい方に考えようにかけるまで立てるましたば、</span><br>
+                <span class="wow fadeIn" data-wow-duration="2s" data-wow-delay="1.2s">たとえばたよりはないのに述べるて、</span><br>
+                <span class="wow fadeIn" data-wow-duration="2s" data-wow-delay="1.3s">そこに時代をあり得が何度に十時間は一杯はほぼなっば得るまでるものです。</span><br>
+                <span class="wow fadeIn" data-wow-duration="2s" data-wow-delay="1.4s">当時ないましか聴い書物があるて。</span><br>
+              </p>
+              <p>
+                <span class="wow fadeIn" data-wow-duration="2s" data-wow-delay="1.6s">その半途は結構広い真面目ないと飛びです事ないはおらましだ、</span><br>
+                <span class="wow fadeIn" data-wow-duration="2s" data-wow-delay="1.7s">低い社会のうちとあるでこの世なためとあっていなものませです。</span>
+              </p>
+              <p>
+                <span class="wow fadeIn" data-wow-duration="2s" data-wow-delay="1.9s">それで私は馬鹿ですのでなっですんですはよかった、</span><br>
+                <span class="wow fadeIn" data-wow-duration="2s" data-wow-delay="2s">新たですて進んですつもりんと困ると、</span><br>
+                <span class="wow fadeIn" data-wow-duration="2s" data-wow-delay="2.1s">そこの人の血をその本位に尊敬達していだで。</span>
+              </p>
+            </div>
           </div>
         </div>
       </section>
@@ -306,7 +320,7 @@
               <ul class="news__list swiper-wrapper">
                 <li class="news__item swiper-slide">
                   <a href="#" class="news__link"></a>
-                  <div class="item__image" style="background: url('images/news_item_img01.jpg') center center no-repeat / cover;"></div>
+                  <div class="item__image" style="background: url('images/news_item_img01.jpg') center center / cover; background-repeat: no-repeat;"></div>
                   <div class="item__content">
                     <time class="item__time">2019-04-21</time>
                     <h3 class="item__title">この元来もあなたか国家哲学にやつしてそれが。</h3>
@@ -314,7 +328,7 @@
                 </li>
                 <li class="news__item swiper-slide">
                   <a href="#" class="news__link"></a>
-                  <div class="item__image" style="background: url('images/news_item_img02.jpg') center center no-repeat / cover;"></div>
+                  <div class="item__image" style="background: url('images/news_item_img02.jpg') center center / cover; background-repeat: no-repeat;"></div>
                   <div class="item__content">
                     <time class="item__time">2019-04-21</time>
                     <h3 class="item__title">この元来もあなたか国家哲学にやつしてそれが。</h3>
@@ -322,7 +336,7 @@
                 </li>
                 <li class="news__item swiper-slide">
                   <a href="#" class="news__link"></a>
-                  <div class="item__image" style="background: url('images/news_item_img03.jpg') center center no-repeat / cover;"></div>
+                  <div class="item__image" style="background: url('images/news_item_img03.jpg') center center / cover; background-repeat: no-repeat;"></div>
                   <div class="item__content">
                     <time class="item__time">2019-04-21</time>
                     <h3 class="item__title">この元来もあなたか国家哲学にやつしてそれが。</h3>
@@ -330,7 +344,7 @@
                 </li>
                 <li class="news__item swiper-slide">
                   <a href="#" class="news__link"></a>
-                  <div class="item__image" style="background: url('images/news_item_img04.jpg') center center no-repeat / cover;"></div>
+                  <div class="item__image" style="background: url('images/news_item_img04.jpg') center center / cover;"></div>
                   <div class="item__content">
                     <time class="item__time">2019-04-21</time>
                     <h3 class="item__title">この元来もあなたか国家哲学にやつしてそれが。</h3>
@@ -415,7 +429,7 @@
                 <a href="#" class="fNav__link">プライバシーポリシー</a>
               </li>
               <li class="fNav__item">
-                <a href="#" class="fNav__link">F&Q</a>
+                <a href="#" class="fNav__link">F&amp;Q</a>
               </li>
             </ul>
           </nav>
@@ -426,5 +440,4 @@
     </footer>
     <script src="js/swiper.min.js"></script>
   </body>
-
 </html>

@@ -64,5 +64,9 @@ $(document).ready(function(){
 	   $('.reserve-amp-tNav-outer').addClass('content');
   }
 
+  if (window.matchMedia('screen and (min-width:544px)').matches) {
+	   $('.header__gNav').addClass('content');
+  }
+
 
 });
