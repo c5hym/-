@@ -1019,6 +1019,10 @@ body {
     height: 48px;
   }
 
+  .main__produce .produce__item .item__title {
+    margin: 0 25px;
+  }
+
 }
 
 
